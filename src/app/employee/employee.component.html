@@ -30,60 +30,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1001</td>
-            <td>Carlos Javier</td>
-            <td>Diaz Flores</td>
-            <td>23/03/2016</td>
-            <td>6 years, 4 months</td>
-            <td>
-                <button class="view-button">
-                    <img src="../../assets/view-icon.svg" alt="view-icon" width="20px" height="15px" />
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>1002</td>
-            <td>Jose Eduardo</td>
-            <td>Piña Lopez</td>
-            <td>23/03/2016</td>
-            <td>6 years, 4 months</td>
-            <td>
-                <button class="view-button">
-                    <img src="../../assets/view-icon.svg" alt="view-icon" width="20px" height="15px" />
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>1003</td>
-            <td>Maricela Yanet</td>
-            <td>Perez Aguayo</td>
-            <td>23/03/2016</td>
-            <td>6 years, 4 months</td>
-            <td>
-                <button class="view-button">
-                    <img src="../../assets/view-icon.svg" alt="view-icon" width="20px" height="15px" />
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>1004</td>
-            <td>Rigoberta Marcela</td>
-            <td>Flores Magon</td>
-            <td>23/03/2016</td>
-            <td>6 years, 4 months</td>
-            <td>
-                <button class="view-button">
-                    <img src="../../assets/view-icon.svg" alt="view-icon" width="20px" height="15px" />
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>1005</td>
-            <td>Ivan Alejandro</td>
-            <td>Zamora Damasco</td>
-            <td>23/03/2016</td>
-            <td>6 years, 4 months</td>
+        <tr *ngFor="let e of employees">
+            <td>{{e.id}}</td>
+            <td>{{e.first_name}}</td>
+            <td>{{e.last_name}}</td>
+            <td>{{e.admission_date}}</td>
+            <td>{{e.seniority}}</td>
             <td>
                 <button class="view-button">
                     <img src="../../assets/view-icon.svg" alt="view-icon" width="20px" height="15px" />

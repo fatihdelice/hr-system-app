@@ -84,39 +84,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Jose Eduardo Piña Lopez</td>
-            <td>Software Specialist</td>
-            <td>25 JUN 2020</td>
-            <td>Active</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>Carlos Javier Diaz Flores</td>
-            <td>Software Specialist</td>
-            <td>23 MAY 2022</td>
-            <td>Active</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>Adriana Gomez Fonseca</td>
-            <td>CEO</td>
-            <td>25 FEB 2005</td>
-            <td>Active</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>Josefina Martinez Peralta</td>
-            <td>Delivery Owner</td>
-            <td>03 DIC 2018</td>
-            <td>Active</td>
-            <td>...</td>
-        </tr>
-        <tr>
-            <td>Sofia Amado Lopez</td>
-            <td>Marketing</td>
-            <td>19 SEP 2019</td>
-            <td>Active</td>
+        <tr *ngFor="let e of employees">
+            <td>{{e.first_name}}{{e.last_name}}</td>
+            <td>{{e.job_position}}</td>
+            <td>{{e.admission_date}}</td>
+            <td>{{e.employee_status}}</td>
             <td>...</td>
         </tr>
     </tbody>

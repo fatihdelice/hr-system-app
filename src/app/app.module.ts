@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -10,6 +11,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { HistoryComponent } from './history/history.component';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { VacationsComponent } from './vacations/vacations.component';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,10 @@ import { VacationsComponent } from './vacations/vacations.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

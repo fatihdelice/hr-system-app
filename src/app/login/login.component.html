@@ -3,7 +3,7 @@
         <img src="../assets/welcome.svg" width="707" height="478" alt="Welcome to {{ title }}!" />
     </section>
     <section class="right_section">
-        <form class="login_form">
+        <form class="login_form" #userlogin="ngForm" (ngSubmit)="login(userlogin)">
             <h1>Hello, Welcome back</h1>
             <input type="email" name="email" placeholder="Email" />
             <input type="password" name="password" placeholder="Password" />
