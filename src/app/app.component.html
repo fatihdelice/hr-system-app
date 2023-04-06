@@ -1,4 +1,10 @@
-<navbar></navbar>
-<main class="main">
-    <router-outlet></router-outlet>
-</main>
+<div *ngIf="isLoggedIn">
+    <navbar></navbar>
+    <main class="main">
+        <router-outlet></router-outlet>
+    </main>
+</div>
+
+<div *ngIf="!isLoggedIn">
+    <login></login>
+</div>

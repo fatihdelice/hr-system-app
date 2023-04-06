@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
-import { EmployeeComponent } from './employee/employee.component';
+import { EmployeesComponent } from './employees/employees.component';
 import { HistoryComponent } from './history/history.component';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { VacationsComponent } from './vacations/vacations.component';
@@ -20,7 +20,7 @@ import { AuthService } from './auth.service';
     NavbarComponent,
     LoginComponent,
     DashboardComponent,
-    EmployeeComponent,
+    EmployeesComponent,
     HistoryComponent,
     HolidaysComponent,
     VacationsComponent

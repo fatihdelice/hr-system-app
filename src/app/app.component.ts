@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hr-system-app';
+
+  constructor(private authService: AuthService) {}
+
+  get isLoggedIn() {
+    return this.authService.loggedIn;
+  }
 }

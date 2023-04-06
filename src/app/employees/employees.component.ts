@@ -3,11 +3,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { employees } from '../employees';
 
 @Component({
-  selector: 'app-employee',
-  templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+  selector: 'employees',
+  templateUrl: './employees.component.html',
+  styleUrls: ['./employees.component.css']
 })
-export class EmployeeComponent {
+export class EmployeesComponent {
   employees = employees;
 
   constructor(
