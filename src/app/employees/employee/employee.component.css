@@ -1,0 +1,174 @@
+.employee-info {
+    width: 100%;
+    height: 166px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+    background: #F8F9FA;
+    border-radius: 8px;
+    margin-bottom: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 33px;
+}
+
+.avatar {
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #E9E9E9;
+}
+
+.e-info,
+.e-info-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.e-info span:nth-child(1) {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0025em;
+    color: #1C1B1F;
+}
+
+.e-info span:nth-child(2) {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0015em;
+    color: #1C1B1F;
+}
+
+.e-info-right span:nth-child(1) {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0015em;
+    color: #1C1B1F;
+}
+
+.e-info-right span:nth-child(2) {
+    font-family: 'Kalinga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    /* or 156% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: #1C1B1F;
+    opacity: 0.7;
+}
+
+.middle-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle-cards .card {
+    width: 209px;
+    height: 254px;
+    background: #F8F9FA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 11px 0;
+}
+
+.card h5 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.card p {
+    font-family: 'Kalinga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    /* identical to box height, or 179% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0025em;
+    color: #000000;
+}
+
+.card img {
+    margin: 13px 0;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 13px;
+}
+
+.bottom-info span {
+    font-family: 'Kalinga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: #000000;
+    /* or 179% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0025em;
+}
+
+.bottom-info p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0015em;
+}
+
+.bottom-info:nth-child(2){
+    border-left: 0.5px solid #A7A8A9;
+}

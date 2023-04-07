@@ -37,9 +37,9 @@
             <td>{{e.admission_date}}</td>
             <td>{{e.seniority}}</td>
             <td>
-                <button class="view-button">
+                <a [routerLink]="['/employees',e.id]" class="view-button" title="View">
                     <img src="../../assets/view-icon.svg" alt="view-icon" width="20px" height="15px" />
-                </button>
+                </a>
             </td>
         </tr>
     </tbody>

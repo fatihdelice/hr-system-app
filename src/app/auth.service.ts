@@ -1,5 +1,5 @@
 export class AuthService {
-    loggedIn = false;
+    loggedIn = true;
     redirectUrl: string | any;
 
     isAuthenticated() {

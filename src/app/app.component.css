@@ -1,7 +1,14 @@
+.app{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 266px;
+}
 main.main{
-    position: absolute;
-    left: 340px;
-    height: 100%;
-    top: 100px;
-    right: 33px;
+    position: relative;
+    width: 1146px;
+    height: 100vh;
 }

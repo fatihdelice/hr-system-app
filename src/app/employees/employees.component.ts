@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { employees } from '../employees';
 
 @Component({
@@ -7,11 +7,10 @@ import { employees } from '../employees';
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.css']
 })
-export class EmployeesComponent {
+export class EmployeesComponent implements OnInit{
   employees = employees;
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute
   ) { }
 
@@ -24,20 +23,11 @@ export class EmployeesComponent {
 
     //query params
     this.route.queryParamMap.subscribe(params => {
-      console.log(params);
+      // console.log(params);
     });
 
     let page = this.route.snapshot.queryParamMap.get('page');
-    console.log(page);
+    // console.log(page);
   }
-
-  loadProducts() {
-    this.router.navigate(['/employee'], {
-      queryParams: {
-        page: 1,
-      }
-    });
-  }
-
 
 }

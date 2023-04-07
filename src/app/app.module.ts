@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EmployeesComponent } from './employees/employees.component';
+import { EmployeeComponent } from './employees/employee/employee.component';
 import { HistoryComponent } from './history/history.component';
 import { HolidaysComponent } from './holidays/holidays.component';
 import { VacationsComponent } from './vacations/vacations.component';
@@ -21,6 +22,7 @@ import { AuthService } from './auth.service';
     LoginComponent,
     DashboardComponent,
     EmployeesComponent,
+    EmployeeComponent,
     HistoryComponent,
     HolidaysComponent,
     VacationsComponent
