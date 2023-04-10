@@ -2,13 +2,29 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { employees } from 'src/app/employees';
 
+interface Tab {
+  title: string;
+}
+
 @Component({
   selector: 'employee',
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+  employees = employees;
   selectedEmployee: any;
+  tabs: Tab[] = [
+    { title: 'Vacations' },
+    { title: 'Contingency' },
+    { title: 'Incapacity' },
+    { title: 'Time by time' }
+  ];
+  activeTab: Tab = this.tabs[0];
+
+  setActiveTab(tab: Tab) {
+    this.activeTab = tab;
+  }
 
   constructor(private route: ActivatedRoute) { }
 

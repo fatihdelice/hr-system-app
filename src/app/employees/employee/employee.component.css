@@ -169,6 +169,194 @@
     letter-spacing: 0.0015em;
 }
 
-.bottom-info:nth-child(2){
+.bottom-info:nth-child(2) {
     border-left: 0.5px solid #A7A8A9;
+}
+
+.tab-container {
+    overflow: hidden;
+    margin-top: 34px;
+}
+
+.tab-header {
+    display: flex;
+}
+
+.tab-header-item {
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 19px;
+    width: 177px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1px;
+}
+
+.tab-header-item.active {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 99;
+}
+
+.tab-content {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+th:first-child {
+    border-top-left-radius: 5px;
+}
+
+th:last-child {
+    border-top-right-radius: 5px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    padding: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Kalinga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+th {
+    background: rgba(217, 217, 217, 0.6);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: rgba(217, 217, 217, 0.18);
+}
+
+th:nth-child(n+2):nth-child(-n+4),
+td:nth-child(n+2):nth-child(-n+4) {
+    border-right: 1px solid #A7A8A9;
+    border-left: 1px solid #A7A8A9;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    background: #D9D9D9;
+    height: 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pagination * {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.pagination select {
+    border: none;
+    background: none;
+    width: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.p-left-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    gap: 10px;
+}
+
+.pl-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border-right: 1px solid #A7A8A9;
+    padding-right: 15px;
+}
+
+.p-right-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.pr-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    border-left: 1px solid #A7A8A9;
+    padding-left: 15px;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:not(:last-child) {
+    margin-right: 2px;
+}
+
+.pagination a:hover {
+    background-color: #666;
+    color: #fff;
+    border-color: #666;
+}
+
+.pagination .active {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+.pr-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80px;
+}
+
+.pr-buttons button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 40px;
+    border-left: 1px solid #A7A8A9;
 }

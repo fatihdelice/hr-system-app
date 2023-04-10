@@ -66,3 +66,77 @@
         </div>
     </div>
 </div>
+
+<div class="tab-container">
+    <div class="tab-header">
+        <div class="tab-header-item" *ngFor="let tab of tabs" [class.active]="tab === activeTab"
+            (click)="setActiveTab(tab)">
+            {{ tab.title }}
+        </div>
+    </div>
+    <div class="tab-content">
+        <ng-container *ngIf="activeTab === tabs[0]">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Job position</th>
+                        <th>Date of admition</th>
+                        <th>Employee status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let e of employees">
+                        <td>{{e.first_name}}{{e.last_name}}</td>
+                        <td>{{e.job_position}}</td>
+                        <td>{{e.admission_date}}</td>
+                        <td>{{e.employee_status}}</td>
+                        <td>...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <div class="p-left-bar">
+                    <div class="pl-page">
+                        <p>Items per page:</p>
+                        <select name="pages" class="page-option">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <p>1-5 of 155 items</p>
+                </div>
+                <div class="p-right-bar">
+                    <div class="pr-page">
+                        <select name="pages" class="page-option">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <p>of 31 pages</p>
+                    </div>
+                    <div class="pr-buttons">
+                        <button class="previous-button">
+                            <img src="../../assets/arrow-left.svg" alt="arrow-left" width="5px" height="8px" />
+                        </button>
+                        <button class="next-button">
+                            <img src="../../assets/arrow-right.svg" alt="arrow-right" width="5px" height="8px" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="activeTab === tabs[1]">
+            <p>Tab 2 content</p>
+        </ng-container>
+        <ng-container *ngIf="activeTab === tabs[2]">
+            <p>Tab 3 content</p>
+        </ng-container>
+        <ng-container *ngIf="activeTab === tabs[3]">
+            <p>Tab 4 content</p>
+        </ng-container>
+    </div>
+</div>
