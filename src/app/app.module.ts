@@ -14,6 +14,7 @@ import { HolidaysComponent } from './holidays/holidays.component';
 import { VacationsComponent } from './vacations/vacations.component';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AuthService } from './auth.service';
     EmployeeComponent,
     HistoryComponent,
     HolidaysComponent,
-    VacationsComponent
+    VacationsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

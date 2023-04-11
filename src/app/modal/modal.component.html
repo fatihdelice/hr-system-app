@@ -1,0 +1,38 @@
+<div class="modal-container" *ngIf="isOpen">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>{{data.vacation ? 'Vacations' : 'Contingency'}}</h2>
+            <span class="modal-close" (click)="closeModal()">&times;</span>
+        </div>
+        <div class="modal-status">
+            <div *ngIf="data.folio">
+                <h4>Folio</h4>
+                <p>{{ data.folio }}</p>
+            </div>
+            <div *ngIf="data.status">
+                <h4>Status</h4>
+                <p>{{ data.status }}</p>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="column" *ngIf="data.initial_date">
+                    <h3>Date requested</h3>
+                    <p>{{ data.initial_date }}</p>
+                </div>
+                <div class="column" *ngIf="data.days_requested">
+                    <h3>Days required</h3>
+                    <p>{{ data.days_requested }}</p>
+                </div>
+            </div>
+            <div class="column" *ngIf="data.comments">
+                <h3>Comments</h3>
+                <p>{{ data.comments }}</p>
+            </div>
+            <div class="column" *ngIf="data.files">
+                <h3>Files</h3>
+                <p *ngFor="let f of data.files">{{ f.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>

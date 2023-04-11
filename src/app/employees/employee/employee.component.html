@@ -80,20 +80,30 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Job position</th>
-                        <th>Date of admition</th>
-                        <th>Employee status</th>
-                        <th>Actions</th>
+                        <th>Folio</th>
+                        <th>Status</th>
+                        <th>Initial Date</th>
+                        <th>Days Requested</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let e of employees">
-                        <td>{{e.first_name}}{{e.last_name}}</td>
-                        <td>{{e.job_position}}</td>
-                        <td>{{e.admission_date}}</td>
-                        <td>{{e.employee_status}}</td>
-                        <td>...</td>
+                    <tr *ngFor="let v of selectedEmployee.vacations">
+                        <td>{{v.folio}}</td>
+                        <td><span class="status-text">{{v.status}}</span></td>
+                        <td>{{v.initial_date}}</td>
+                        <td>{{v.days_requested}}</td>
+                        <td class="action-buttons">
+                            <a (click)="openModal(v)" title="Edit">
+                                <img src="../../assets/edit_icon.svg" alt="edit-icon" width="20px" height="20px" />
+                            </a>
+                            <a title="Cancel">
+                                <img src="../../assets/cancel_icon.svg" alt="cancel-icon" width="20px" height="20px" />
+                            </a>
+                            <a title="Delete">
+                                <img src="../../assets/delete_icon.svg" alt="delete-icon" width="20px" height="20px" />
+                            </a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -130,7 +140,67 @@
             </div>
         </ng-container>
         <ng-container *ngIf="activeTab === tabs[1]">
-            <p>Tab 2 content</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Folio</th>
+                        <th>Status</th>
+                        <th>Initial Date</th>
+                        <th>Days Requested</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let c of selectedEmployee.contingency">
+                        <td>{{c.folio}}</td>
+                        <td><span class="status-text">{{c.status}}</span></td>
+                        <td>{{c.initial_date}}</td>
+                        <td>{{c.days_requested}}</td>
+                        <td class="action-buttons">
+                            <a (click)="openModal(c)" title="Edit">
+                                <img src="../../assets/edit_icon.svg" alt="edit-icon" width="20px" height="20px" />
+                            </a>
+                            <a title="Cancel">
+                                <img src="../../assets/cancel_icon.svg" alt="cancel-icon" width="20px" height="20px" />
+                            </a>
+                            <a title="Delete">
+                                <img src="../../assets/delete_icon.svg" alt="delete-icon" width="20px" height="20px" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <div class="p-left-bar">
+                    <div class="pl-page">
+                        <p>Items per page:</p>
+                        <select name="pages" class="page-option">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <p>1-5 of 155 items</p>
+                </div>
+                <div class="p-right-bar">
+                    <div class="pr-page">
+                        <select name="pages" class="page-option">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <p>of 31 pages</p>
+                    </div>
+                    <div class="pr-buttons">
+                        <button class="previous-button">
+                            <img src="../../assets/arrow-left.svg" alt="arrow-left" width="5px" height="8px" />
+                        </button>
+                        <button class="next-button">
+                            <img src="../../assets/arrow-right.svg" alt="arrow-right" width="5px" height="8px" />
+                        </button>
+                    </div>
+                </div>
+            </div>
         </ng-container>
         <ng-container *ngIf="activeTab === tabs[2]">
             <p>Tab 3 content</p>
@@ -140,3 +210,5 @@
         </ng-container>
     </div>
 </div>
+
+<modal [(isOpen)]="isOpen" [data]="modalData"></modal>

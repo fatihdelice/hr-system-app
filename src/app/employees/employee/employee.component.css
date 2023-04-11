@@ -257,6 +257,27 @@ td:nth-child(n+2):nth-child(-n+4) {
     border-left: 1px solid #A7A8A9;
 }
 
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-buttons a {
+    cursor: pointer;
+}
+
+.status-text {
+    padding: 7px 12px;
+    border: 1px solid #343A40;
+    border-radius: 16px;
+    height: 33px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
 .pagination {
     display: flex;
     justify-content: space-between;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { employees } from 'src/app/employees';
 
@@ -22,6 +22,21 @@ export class EmployeeComponent implements OnInit {
   ];
   activeTab: Tab = this.tabs[0];
 
+  isOpen = false;
+  modalData: any;
+  isOpenChanged = new EventEmitter<boolean>();
+
+  openModal(data: any) {
+    this.modalData = data;
+    this.isOpen = true;
+    this.isOpenChanged.emit(this.isOpen);
+  }
+
+  closeModal() {
+    this.isOpen = false;
+    this.isOpenChanged.emit(this.isOpen);
+  }
+  
   setActiveTab(tab: Tab) {
     this.activeTab = tab;
   }
@@ -36,6 +51,8 @@ export class EmployeeComponent implements OnInit {
       let param = params.get('id');
       let id = param ? +param : null;
       this.selectedEmployee = employees.find(i => i.id === id);
-    })
+    });
+
+    this.isOpenChanged.emit(this.isOpen);
   }
 }
